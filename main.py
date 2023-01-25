@@ -11,7 +11,7 @@ collection = dataBase['Products']
 
 # Sample data
 d = {'companyName': 'iNeuron',
-     'product': 'Affordable AI',
+     'product': 'Affordable AI', 
      'courseOffered': 'Machine Learning with Deployment'}
 
 # Insert above records in the collection
