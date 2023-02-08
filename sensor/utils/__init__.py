@@ -1,4 +1,3 @@
-
 import pandas as pd
 from sensor.logger import logging
 from sensor.exception import SensorException
@@ -95,4 +94,3 @@ def load_numpy_array_data(file_path: str) -> np.array:
             return np.load(file_obj)
     except Exception as e:
         raise SensorException(e, sys) from e
-

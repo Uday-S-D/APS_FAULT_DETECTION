@@ -1,3 +1,4 @@
+import os
 from sensor.entity.config_entity import TRANSFORMER_OBJECT_FILE_NAME,MODEL_FILE_NAME,TARGET_ENCODER_OBJECT_FILE_NAME
 from glob import glob
 from typing import Optional
@@ -15,7 +16,7 @@ class ModelResolver:
         self.transformer_dir_name = transformer_dir_name
         self.target_encoder_dir_name=target_encoder_dir_name
         self.model_dir_name=model_dir_name
- 
+
 
     def get_latest_dir_path(self)->Optional[str]:
         try:
