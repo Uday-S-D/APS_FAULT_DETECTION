@@ -2,9 +2,11 @@ import pymongo
 import pandas as pd
 import json
 
+from sensor.config import mongo_client
+
 
 # Provide the mongodb localhost url to connect python to mongodb.
-client = pymongo.MongoClient("mongodb://localhost:27017/neurolabDB")
+#client = pymongo.MongoClient("mongodb+srv://usd:a123$@cluster0.ucvqpvy.mongodb.net/?retryWrites=true&w=majority")
 
 DATA_FILE_PATH = "/config/workspace/aps_failure_training_set1.csv"
 DATABASE_NAME = 'aps'
@@ -22,4 +24,4 @@ print(json_record[0])
 
 
 #Insert Converted record to MongoDb
-client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
+mongo_client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
